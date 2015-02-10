@@ -1,0 +1,17 @@
+#support a{
+	width: 33%;
+	float: left
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#div-left{
+	width: 49%;
+	float: left;
+}
+#div-right{
+	width: 49%;
+	float: right;
+}
