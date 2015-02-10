@@ -1,0 +1,143 @@
+@import 'normalize'
+blue = #001A66
+celeste = #408FCD
+azul-mar = #194466
+azul-oscuro = #1B4469
+azul-recontra-oscuro = #0E2538
+// MIXINS
+vendor(prop, args)
+	-webkit-{prop} args
+	   -moz-{prop} args
+	    -ms-{prop} args
+	     -o-{prop} args
+	        {prop} args
+ 
+border-radius()
+	vendor('border-radius', arguments)
+ 
+box-shadow()
+	vendor('box-shadow', arguments)
+ 
+transition()
+	vendor('transition', arguments)
+a
+	&:hover
+		text-decoration none
+		
+.img-responsive
+	width: 100% \9;
+.descripcion
+	margin 10px 0px
+	font-size 13px
+	font-weight 300
+	display inline-block
+ 		
+.white
+	color white
+.blue
+	color azul-oscuro
+// CLASE PARA ELABORAR UN BOTON
+.button
+	background-color celeste
+	border-bottom 5px solid azul-oscuro
+	padding 10px 70px
+	color white
+	font-weight 300
+	display inline-block
+	font-size 35px
+	border-radius 5px
+	transition all 0.3s ease
+	&:hover
+		color white
+		text-decoration none
+		background-color azul-mar
+		border-bottom 5px solid azul-recontra-oscuro
+
+#borde-up
+	background-color blue
+	height 20px
+
+body
+	background-color white
+	font-family 'Roboto', sans-serif
+	padding-top -30px
+	
+	header
+		background-image url('../img/bg-header2.png')
+		background-size cover
+		background-repeat no-repeat
+		h1
+			color white
+			font-size 50px
+			font-weight 900
+			font-style italic
+			margin 0	
+			.cruz
+				font-size 100px
+				color azul-oscuro
+				font-weight 900				
+		span
+			font-weight 300
+			font-size 30px
+			color white
+			margin-bottom 15px
+			display inline-block
+		#slide
+			img
+				width 100%
+				height auto
+				
+	#welcome
+		background-color azul-oscuro
+		color white
+		padding 25px 0
+		h2
+			font-size 35px
+			font-weight 500
+		p
+			font-size 20px
+			font-weight 300
+			
+	#signup,
+	#sponsor,
+	#support
+		text-align center
+		padding 25px 0
+		img
+			margin 0 auto
+			padding-top 0px
+			transition all 0.2s ease-in-out
+			&:hover
+				padding-top 5px
+		h2			
+			font-size 35px
+			font-weight 500
+
+	#signup
+		background-image url('../img/bg-signup.jpg')
+		background-size cover
+		background-position center center
+		color azul-oscuro
+		p
+			font-size 20px
+			font-weight 300
+	
+	#sponsor
+		background-color celeste
+		h2			
+			color white
+			
+	#support
+		background-color white
+		h2			
+			font-size 30px
+			color azul-oscuro
+
+	footer
+		p
+			border-top 1px solid azul-oscuro
+			padding 2em 0
+			text-align center
+			font-weight 500
+			font-size 13px
+			color azul-oscuro
